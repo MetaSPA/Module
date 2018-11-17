@@ -1,0 +1,26 @@
+{
+  "name": "@metaspa/module",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hlhr202 <hlhr202@163.com> (https://github.com/hlhr202)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MetaSPA/Module.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MetaSPA/Module/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.1.6"
+  },
+  "peerDependencies": {},
+  "homepage": "https://github.com/MetaSPA/Module#readme",
+  "dependencies": {},
+  "description": ""
+}
