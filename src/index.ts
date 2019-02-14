@@ -1,13 +1,11 @@
 export interface IDictionaryType {
     [x: string]: any;
 }
-
-export type IMetaSPAProvider<P extends IDictionaryType> = {
-    [K in keyof P]?: P[K]
+export declare type IMetaSPAProvider<P extends IDictionaryType> = {
+    [K in keyof P]?: P[K];
 } & {
     MetaSPA: MetaSPACore<P>;
 };
-
 export interface IMetaRegistration<P extends IDictionaryType> {
     namespace: string;
     entries: string | string[];
@@ -18,10 +16,10 @@ export interface IMetaRegistration<P extends IDictionaryType> {
     onLoad: (module: any, context: MetaSPACore<P>) => any;
     unMount: (module: any, context: MetaSPACore<P>) => any;
 }
-
-export type IMetaSPALoadFunction = (
-    config: { namespace: string; modules: any },
-) => Promise<void>;
+export declare type IMetaSPALoadFunction = (config: {
+    namespace: string;
+    modules: any;
+}) => Promise<void>;
 export declare class MetaSPACore<P extends IDictionaryType> {
     static getInstance: () => MetaSPACore<any>;
     runTime: IDictionaryType;
