@@ -1,6 +1,6 @@
 {
   "name": "@metaspa/module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -19,8 +19,12 @@
   "devDependencies": {
     "typescript": "^3.1.6"
   },
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@metaspa/core": "0.0.7"
+  },
   "homepage": "https://github.com/MetaSPA/Module#readme",
-  "dependencies": {},
+  "dependencies": {
+    "@metaspa/core": "0.0.7"
+  },
   "description": ""
 }
