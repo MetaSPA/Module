@@ -22,18 +22,20 @@ export interface IMetaRegistration<P extends IDictionaryType> {
 export type IMetaSPALoadFunction = (
     config: { namespace: string; modules: any },
 ) => Promise<void>;
-
-export interface MetaSPACore<P extends IDictionaryType = {}> {
+export declare class MetaSPACore<P extends IDictionaryType> {
+    static getInstance: () => MetaSPACore<any>;
     runTime: IDictionaryType;
     providers: IMetaSPAProvider<P>;
     registeredModules: IDictionaryType;
     metaSPALoad: IMetaSPALoadFunction;
-    registrations: { [x: string]: IMetaRegistration<P> };
-    register<T extends IDictionaryType>(
-        config: IMetaRegistration<T>,
-    ): MetaSPACore;
-    loadModule(namespace: string): MetaSPACore;
-    unMountModule(namespace: string): MetaSPACore;
+    registrations: {
+        [x: string]: IMetaRegistration<P>;
+    };
+    register<T extends IDictionaryType>(config: IMetaRegistration<T>): this;
+    private _loadModuleAsync;
+    loadModule(namespace: string): this;
+    private _unMountModuleAsync;
+    unMountModule(namespace: string): this;
 }
 
 declare global {
